@@ -1,0 +1,9 @@
+---
+Name: item_watch_notifications
+---
+SilverStripe\Core\Injector\Injector:
+  Symbiote\Watch\ContentWatchNotification:
+    properties:
+      watchService: %$Symbiote\Watch\WatchService
+      notificationService: %$Symbiote\Notifications\Service\NotificationService
+

@@ -83,9 +83,9 @@ class WatchService
         return ItemWatch::get()->filter($filter);
     }
 
-    public function watchedItemsOfType($type)
+    public function watchedItemsOfType($type, $member = null)
     {
-        $member = Member::currentUser();
+        $member = $member ?: Member::currentUser();
         if (!$member) {
             return [];
         }
