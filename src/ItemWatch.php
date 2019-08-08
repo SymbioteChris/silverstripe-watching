@@ -29,8 +29,8 @@ class ItemWatch extends DataObject
 
     public function getWatchedItem()
     {
-        if (!$this->watchedItem && $this->WatchedType && $this->WatchedID) {
-            $this->watchedItem = DataList::create($this->WatchedType)->restrictedByID($this->WatchedID);
+        if (!$this->watchedItem) {
+            $this->watchedItem = $this->Watched();
         }
         return $this->watchedItem;
     }
