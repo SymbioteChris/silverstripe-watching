@@ -27,13 +27,3 @@ SilverStripe\Core\Injector\Injector:
       watchService: %$Symbiote\Watch\WatchService
       notificationService: %$Symbiote\Notifications\Service\NotificationService
 ```
-
-
-## Credits (OPTIONAL)
-
-Mention dependencies / shoutouts / stackoverflow answers that assisted.
-
-ie.
-* [Jonom](https://github.com/jonom/silverstripe-environment-awareness) for the format of this README.md
-* [Barakat S](https://github.com/FileZ/php-clamd) for clamd PHP interface
-* ["How to Forge" users](https://web.archive.org/web/20161124000346/https://www.howtoforge.com/community/threads/clamd-will-not-start.34559/) for fixing permissions relating to ClamAV

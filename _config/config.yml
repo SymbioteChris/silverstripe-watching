@@ -7,3 +7,16 @@ SilverStripe\Core\Injector\Injector:
       watchService: %$Symbiote\Watch\WatchService
       notificationService: %$Symbiote\Notifications\Service\NotificationService
 
+
+---
+Name: content_watch_webservices
+---
+Symbiote\ApiWrapper\ApiWrapperController:
+  versions:
+    v1:
+      watch: 'WatchServiceApiController'
+SilverStripe\Core\Injector\Injector:
+  WatchServiceApiController:
+    class: Symbiote\ApiWrapper\ServiceWrapperController
+    properties:
+      service: %$Symbiote\Watch\WatchService
