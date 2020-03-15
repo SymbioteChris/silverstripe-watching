@@ -1,0 +1,39 @@
+.ContentSubscriber {
+	display: flex;
+	justify-content: flex-end;
+
+	&__ToggleButton {
+		display: flex;
+		align-items: center;
+		border-radius: 100px;
+		background: $NeutralLightest;
+		color: $PrimaryColourDark;
+    	transition: all 0.25s;
+    	cursor: pointer;
+
+    	&:hover {
+    		background: darken($NeutralLightest, 5%);
+    	}
+
+    	&::before {
+    		content: '';
+    		width: 30px;
+    		height: 30px;
+    		// background: url('~app/assets/images/icon-subscribe.svg') no-repeat;
+    		display: inline-flex;
+    		margin-right: 0.75rem;
+    	}
+
+    	&--IsWatching {
+    		&::before {
+		    	// background: url('~app/assets/images/icon-unsubscribe.svg') no-repeat;
+    		}
+        }
+
+        &__Text {
+            @media (max-width: $screen-sm-max) {
+                display:none;
+            }
+        }
+    }
+}
