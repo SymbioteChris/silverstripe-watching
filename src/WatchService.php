@@ -64,7 +64,7 @@ class WatchService
     {
         $member = Member::currentUser();
         if (!$member) {
-            return false;
+            return new ArrayList();
         }
 
         $filter = [
