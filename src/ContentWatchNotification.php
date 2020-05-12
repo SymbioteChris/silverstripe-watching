@@ -33,12 +33,15 @@ class ContentWatchNotification extends DataExtension {
             if ($this->owner instanceof \Page && method_exists($this->owner, 'getSectionPage')) {
                 $section = $this->owner->getSectionPage();
                 if ($section && $section->ID != $this->owner->ID) {
+                    $link = $this->owner->AbsoluteLink();
                     $this->notificationService->notify(
                         'SECTION_CONTENT_PUBLISHED',
                         $section,
                         [
                             'InnerTitle' => $this->owner->Title,
-                            'InnerLink' => $this->owner->AbsoluteLink(),
+                            'InnerLink' => $link,
+                            'Link' => $link,
+                            'SectionLink' => $section->AbsoluteLink(),
                         ]
                     );
                 }
